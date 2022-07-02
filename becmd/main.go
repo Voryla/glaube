@@ -7,7 +7,6 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use: "becmd",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("hello")
 	},
