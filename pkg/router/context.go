@@ -1,4 +1,4 @@
-package berouter
+package router
 
 import (
 	"encoding/json"

@@ -1,6 +1,7 @@
-package berouter
+package router
 
 import (
+	"github.com/Voryla/Glaube/pkg/common/utils"
 	"github.com/fatih/color"
 	"github.com/julienschmidt/httprouter"
 	"net/http"
@@ -11,6 +12,7 @@ type H map[string]any
 type Engine struct {
 	router *httprouter.Router
 }
+
 type HandlerFunc func(*Context)
 
 func (e *Engine) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -29,8 +31,8 @@ func (e *Engine) Get(path string, handler HandlerFunc) {
 }
 
 func (e *Engine) Run(addr string) {
-	printLogo()
-	color.Blue("[Boot]welcome to use Glaube")
+	utils.PrintLogo()
+	color.Blue("[Boot]welcome to use glaube")
 	if err := http.ListenAndServe(addr, e); err != nil {
 
 	}
