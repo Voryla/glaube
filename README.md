@@ -2,6 +2,6 @@
 glaube is a simple web framework practice  
 Based on httprouter     
 To do list 
-- router       √
+- _router(Beta)_        √
 - middleware   ×
 - config       ×
